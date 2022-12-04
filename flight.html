@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+    <title>Css Template</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0;
+      }
+      #header {
+        background-color: #15457b;
+        color: white;
+        height: 60px;
+        border: 1px solid;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #content1 {
+        background-color: #75cae7eb;
+        height: 875px;
+        width: 30%;
+        border: 1px solid black;
+        border-top: 0px;
+        border-right: 0px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      #content2 {
+        /* height: 500px; */
+        width: 70%;
+        border: 1px solid black;
+        border-top: 0px;
+        display: flex;
+        flex-direction: column;
+        /* gap: 5px; */
+        /* border-left: 0px; */
+      }
+      .container {
+        display: flex;
+        /* gap: 7px; */
+      }
+      .navbar {
+        display: flex;
+        gap: 50px;
+      }
+      .navbar span a {
+        color: white;
+        text-decoration: none;
+      }
+      .search-box {
+        margin-right: 20px;
+      }
+      .search-box input {
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid silver;
+      }
+      .top {
+        border: 1px solid black;
+        border-radius: 4px;
+        background-color: #15457b;
+        color: white;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .top input {
+        padding: 10px;
+      }
+      .bottom {
+        border: 1px solid black;
+        background-color: #15457b;
+        color: white;
+        border-radius: 4px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+      .content2-top {
+        background-color: #75cae7eb;
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        padding: 5px 25px;
+        border: 1px solid black;
+        align-items: center;
+      }
+      .content2-bottom {
+        display: flex;
+        color: white;
+        background-color: #15457b;
+        justify-content: space-between;
+        padding: 15px 30px;
+        gap: 5px;
+        margin: 20px;
+        border: 1px solid black;
+        align-items: end;
+        font-size: 30px;
+        border-radius: 5px;
+      }
+      .flight-detail {
+        display: flex;
+        flex-direction: column;
+        background-color: #75cae7eb;
+      }
+      .child {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+      }
+      .btn {
+        padding: 10px 12px;
+        background-color: #75cae7eb;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+      }
+      .radio {
+        display: flex;
+      }
+
+      @media screen and (max-width: 500px) {
+        .container {
+          flex-direction: column;
+        }
+        #content1 {
+          height: 300px;
+          width: 100%;
+          border: 1px solid black;
+          border-top: 1px solid black;
+          border-right: 1px solid black;
+        }
+        #content2 {
+          height: 300px;
+          width: 100%;
+          border: 1px solid black;
+          border-top: 1px solid black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="maindiv">
+      <div id="header">
+        <img src="img2.png" height="100%" width="90" id="logo1" />
+        <div class="navbar">
+          <span><a href="">Flights</a></span>
+          <span><a href="">Hotels</a></span>
+          <span><a href="">Homestays</a></span>
+          <span><a href="">Trains</a></span>
+          <span><a href="">Buses</a></span>
+          <span><a href="">Cabs</a></span>
+        </div>
+        <div class="search-box">
+          <input type="search" placeholder="search..." />
+        </div>
+      </div>
+      <div class="container">
+        <section id="content1">
+          <div class="radio">
+            <label for="">one way </label
+            ><input type="radio" value="one way" name="via" width="50px" />
+            <label for="">return </label
+            ><input type="radio" value="return" name="via" width="50px" />
+          </div>
+          <div class="top">
+            <input type="text" placeholder="Enter origin city." />
+            <input type="text" placeholder="Enter destination city" />
+            <input type="date" value="Departure Date" />
+            <input type="date" placeholder="Return Date" />
+            <button class="btn" style="width: 80px">search</button>
+          </div>
+          <div class="bottom">
+            <h3>Price Range</h3>
+            <label style="display: flex; justify-content: space-between"
+              ><span>0</span> <span>10000</span></label
+            >
+            <input type="range" min="0" max="10000" placeholder="range" />
+          </div>
+        </section>
+        <section id="content2">
+          <div class="content2-top">
+            <h1>Pune > Delhi > Pune</h1>
+            <div>
+              <span>Depart: 1 jan 2022</span><br />
+              <span>Return: 2 jan 2022</span>
+            </div>
+          </div>
+          <div class="flight-detail">
+            <div class="content2-bottom">
+              <div class="child">
+                <h2 style="margin: 0">Rs. 9500</h2>
+                <span style="font-size: 15px">AI-202</span>
+                <span>PNQ > DEL</span>
+                <span>Depart: 10.00 AM</span>
+                <span>Arrive: 12.00 PM</span>
+              </div>
+              <div class="child">
+                <span style="font-size: 15px">AI-202</span>
+                <span>PNQ > DEL</span>
+                <span>Depart: 10.00 AM</span>
+                <span>Arrive: 12.00 PM</span>
+              </div>
+              <div class="child">
+                <img src="img2.png" height="100%" width="170" id="logo1" />
+                <button class="btn">Book This Flight</button>
+              </div>
+            </div>
+            <div class="content2-bottom">
+              <div class="child">
+                <h2 style="margin: 0">Rs. 9500</h2>
+                <span style="font-size: 15px">AI-202</span>
+                <span>PNQ > DEL</span>
+                <span>Depart: 10.00 AM</span>
+                <span>Arrive: 12.00 PM</span>
+              </div>
+              <div class="child">
+                <span style="font-size: 15px">AI-202</span>
+                <span>PNQ > DEL</span>
+                <span>Depart: 10.00 AM</span>
+                <span>Arrive: 12.00 PM</span>
+              </div>
+              <div class="child">
+                <img src="img2.png" height="100%" width="170" id="logo1" />
+                <button class="btn">Book This Flight</button>
+              </div>
+            </div>
+            <div class="content2-bottom">
+              <div class="child">
+                <h2 style="margin: 0">Rs. 9500</h2>
+                <span style="font-size: 15px">AI-202</span>
+                <span>PNQ > DEL</span>
+                <span>Depart: 10.00 AM</span>
+                <span>Arrive: 12.00 PM</span>
+              </div>
+              <div class="child">
+                <span style="font-size: 15px">AI-202</span>
+                <span>PNQ > DEL</span>
+                <span>Depart: 10.00 AM</span>
+                <span>Arrive: 12.00 PM</span>
+              </div>
+              <div class="child">
+                <img src="img2.png" height="100%" width="170" id="logo1" />
+                <button class="btn">Book This Flight</button>
+              </div>
+            </div>
+            <div class="child3"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
